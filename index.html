@@ -13,30 +13,36 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: #121212;
-            color: #e0e0e0;
+            color: #eaeaea;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
         header {
-            background: url('https://static.vecteezy.com/system/resources/previews/001/223/059/original/hexagon-technology-banner-with-text-space-vector.jpg') no-repeat center center/cover;
-            color: #fff;
-            height: 60vh;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            background: linear-gradient(135deg, #1f1f1f, #000);
+            color: #ffffff;
+            padding: 1rem;
         }
 
         header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
         }
 
         header p {
             font-size: 1.5rem;
+            font-weight: 300;
+            max-width: 700px;
         }
 
         .container {
@@ -46,33 +52,48 @@
         }
 
         .section {
-            margin-bottom: 2.5rem;
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
         }
 
         .section h2 {
             font-size: 2.5rem;
-            color: #1e90ff;
+            font-weight: 600;
             margin-bottom: 1rem;
+            color: #cccccc;
         }
 
         .section p {
             font-size: 1.2rem;
+            max-width: 800px;
             margin-bottom: 1.5rem;
+            color: #b0b0b0;
         }
 
         .section img {
             max-width: 100%;
-            border-radius: 10px;
-            margin: 1rem 0;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .section img:hover {
+            transform: scale(1.05);
         }
 
         footer {
-            background-color: #1e1e1e;
-            color: #e0e0e0;
+            background-color: #1a1a1a;
+            color: #888;
             text-align: center;
-            padding: 1.5rem 0;
+            padding: 2rem 0;
             margin-top: 2rem;
+            font-size: 0.9rem;
         }
 
         footer p {
@@ -80,12 +101,34 @@
         }
 
         footer a {
-            color: #1e90ff;
+            color: #888;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         footer a:hover {
-            text-decoration: underline;
+            color: #ffffff;
+        }
+
+        @media (min-width: 768px) {
+            .section {
+                flex-direction: row;
+                text-align: left;
+            }
+
+            .section h2 {
+                text-align: center;
+            }
+
+            .section p {
+                max-width: none;
+                margin-right: 2rem;
+            }
+
+            .section img {
+                margin-top: 0;
+                margin-left: 2rem;
+            }
         }
     </style>
 </head>
@@ -97,21 +140,27 @@
 
     <div class="container">
         <section class="section">
-            <h2>About Us</h2>
-            <p>At Zenova Pro, we specialize in bridging the gap between innovative talent and forward-thinking organizations. Our mission is to connect professionals with meaningful opportunities and provide solutions that elevate businesses to new heights.</p>
-            <img src="https://englundstudio.com/wp-content/uploads/2016/11/about.us_.banner.jpg" alt="About Us">
+            <div>
+                <h2>About Us</h2>
+                <p>At Zenova Pro, we specialize in bridging the gap between innovative talent and forward-thinking organizations. Our mission is to connect professionals with meaningful opportunities and provide solutions that elevate businesses to new heights.</p>
+            </div>
+            <img src="https://dslntlv9vhjr4.cloudfront.net/crowd_images/9SNHwSikJkW5W.png" alt="About Us">
         </section>
 
         <section class="section">
-            <h2>Our Services</h2>
-            <p>Whether you're looking for top-tier recruitment, strategic consulting, or managed solutions, Zenova Pro delivers tailored services to meet your unique needs. Our expertise lies in creating seamless connections and fostering success.</p>
-            <img src="http://lyropharm.com/wp-content/uploads/2017/08/banner-our-services-1443074773.png" alt="Our Services">
+            <div>
+                <h2>Our Services</h2>
+                <p>Whether you're looking for top-tier recruitment, strategic consulting, or managed solutions, Zenova Pro delivers tailored services to meet your unique needs. Our expertise lies in creating seamless connections and fostering success.</p>
+            </div>
+            <img src="https://canadiantaxcompliance.com/wp-content/uploads/2023/10/DALL%C2%B7E-2023-10-26-10.40.34-Photo-of-a-person-seen-from-above-from-shoulders-to-hands-using-a-laptop-on-a-dark-background.-The-laptop-is-placed-on-a-bright-white-circle.-Adjace.png" alt="Our Services">
         </section>
 
         <section class="section">
-            <h2>Contact Us</h2>
-            <p>Ready to collaborate or learn more? Reach out to us at <a href="mailto:contact@zenovapro.com">contact@zenovapro.com</a> and let's start building the future together.</p>
-            <img src="https://www.it-expertsolutions.com/images/2020/10/30/contact-us-banner.jpg" alt="Contact Us">
+            <div>
+                <h2>Contact Us</h2>
+                <p>Ready to collaborate or learn more? Reach out to us at <a href="mailto:contact@zenovapro.com">contact@zenovapro.com</a> and let's start building the future together.</p>
+            </div>
+            <img src="https://i0.wp.com/www.lawgroup.com.au/wp-content/uploads/2019/02/Website-Design-Background-1.jpg?w=1920&ssl=1" alt="Contact Us">
         </section>
     </div>
 
